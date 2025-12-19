@@ -61,10 +61,14 @@ def logwin13():
     win8.withdraw()
     win14.deiconify()
 
+def showname():
+    wintarah.deiconify()
+    win1.withdraw()
 
-
-
-
+def backshowname():
+    wintarah.withdraw()
+    win1.deiconify()
+    
 
 def back1():
     win1.deiconify()
@@ -331,6 +335,7 @@ Sazandeh=tk.Label(win1,text=":طراح",foreground="#cd2d0d",font=("B Nazanin",2
 canvas.create_window(520,50,window=Sazandeh)
 Sazandeh1=tk.Label(win1,text="نیما صدفی همدانی",foreground="#0e45ea",font=("B Nazanin",25),bg="#1ced38")
 canvas.create_window(520,100,window=Sazandeh1)
+
 #-------------------------
 image1=Image.open("image14.png")
 canvas_image1 = ImageTk.PhotoImage(image1.resize((1024, 800)))
@@ -364,6 +369,32 @@ canvas.create_window(650, 300, window=b6)
 #button next_page
 b13=tk.Button(win1,text="صفحه بعد",bg="#1d4f2b",fg="white",width=15,height=3,command=next_page)
 canvas.create_window(800,550, window=b13)
+
+bname=tk.Button(win1,text="درباره سازنده",bg="red",fg="black",width=15,height=3,command=showname)
+canvas.create_window(680,550,window=bname)
+
+wintarah=tk.Toplevel(win1)
+wintarah.withdraw()
+wintarah.title("سازنده")
+wintarah.geometry("550x550")
+#---------------------------------------
+canvas_wint=tk.Canvas(wintarah,width=550,height=550)
+canvas_wint.pack()
+
+imaget=Image.open("Name.jpg")
+canvas_imaget = ImageTk.PhotoImage(imaget.resize((550, 550)))
+canvas_wint.create_image(275,275, anchor="center", image=canvas_imaget)
+
+Sazandeh=tk.Label(wintarah,text=":طراح",foreground="black",font=("B Nazanin",25),bg="#eedc12")
+canvas_wint.create_window(275,270,window=Sazandeh)
+Sazandeh1=tk.Label(wintarah,text="نیما صدفی همدانی",foreground="#0e45ea",font=("B Nazanin",25),bg="#fff")
+canvas_wint.create_window(275,350,window=Sazandeh1)
+
+Sazandeh_gmail=tk.Label(wintarah,text="Nima10.N10@gmail.com",foreground="#0e45ea",font=("B Nazanin",25),bg="#fff")
+canvas_wint.create_window(275,420,window=Sazandeh_gmail)
+
+backname=tk.Button(wintarah,text="بازگشت",bg="#eedc12",fg="black",width=15,height=3,command=backshowname)
+canvas_wint.create_window(500,475,window=backname)
 
 #---------win2_dayereh---------------
 win2=tk.Toplevel(win1)
@@ -505,7 +536,7 @@ image6=Image.open("image7.png")
 canvas_image6 = ImageTk.PhotoImage(image6.resize((550, 550)))
 canvas_win6.create_image(275,275, anchor="center", image=canvas_image6)
 
-label5=tk.Label(win6,text="لطفا اندازه شعاع خود را وارد کنید",foreground="blue",font=("B Nazanin",25),bg="#19838a")
+label5=tk.Label(win6,text="لطفا اندازه ضلع خود را وارد کنید",foreground="blue",font=("B Nazanin",25),bg="#19838a")
 canvas_win6.create_window(270,80,window=label5)
 
 text_box5=tk.Entry(win6,width=25)
@@ -827,7 +858,6 @@ canvas_win14.create_window(230,280, window=v12)
 
 b26=tk.Button(win14,text="بازگشت",bg="#cde70b",fg="black",width=12,height=2,command=back12)
 canvas_win14.create_window(450,400, window=b26)
-
 
 
 
