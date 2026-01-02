@@ -150,8 +150,6 @@ def back12():
     text_box20.delete(0, tk.END)
     javab12.config(text="")
 
-
-
 #-----Defs_reset----------
 def reset1():
     text_box1.delete(0, tk.END)
@@ -325,6 +323,7 @@ def previous_page():
     win8.withdraw()
 
 #------پنجره اصلی--------
+#region
 win1 = tk.Tk()
 win1.title("محیط و مساحت")
 win1.geometry("1024x800")
@@ -395,8 +394,9 @@ canvas_wint.create_window(275,420,window=Sazandeh_gmail)
 
 backname=tk.Button(wintarah,text="بازگشت",bg="#eedc12",fg="black",width=15,height=3,command=backshowname)
 canvas_wint.create_window(500,475,window=backname)
-
+#endregion
 #---------win2_dayereh---------------
+#region
 win2=tk.Toplevel(win1)
 win2.withdraw()
 win2.title("محیط دایره")
@@ -427,7 +427,9 @@ canvas_win2.create_window(230,180, window=v1)
 
 b7=tk.Button(win2,text="بازگشت",bg="#307b35",fg="white",width=12,height=2,command=back1)
 canvas_win2.create_window(450,430, window=b7)
+#endregion
 #--------win3_dayereh----------------
+#region
 win3=tk.Toplevel(win1)
 win3.withdraw()
 win3.title("مساحت دایره")
@@ -457,9 +459,9 @@ canvas_win3.create_window(230,180, window=v2)
 
 b8=tk.Button(win3,text="بازگشت",bg="#307b35",fg="white",width=12,height=2,command=back2)
 canvas_win3.create_window(450,430, window=b8)
-
-
+#endregion
 #-----win4_moraba-------------------
+#region
 win4=tk.Toplevel(win1)
 win4.withdraw()
 win4.title("محیط مربع")
@@ -490,8 +492,9 @@ canvas_win4.create_window(230,180, window=v3)
 
 b9=tk.Button(win4,text="بازگشت",bg="#307b35",fg="white",width=12,height=2,command=back3)
 canvas_win4.create_window(450,430, window=b9)
-
+#endregion
 #-----win5_moraba--------------------
+#region
 win5=tk.Toplevel(win1)
 win5.withdraw()
 win5.title("مساحت مربع")
@@ -521,9 +524,9 @@ canvas_win5.create_window(230,180, window=v4)
 
 b10=tk.Button(win5,text="بازگشت",bg="#307b35",fg="white",width=12,height=2,command=back4)
 canvas_win5.create_window(450,430, window=b10)
-
-
+#endregion
 #-----win6_lozi----------------------
+#region
 win6=tk.Toplevel(win1)
 win6.withdraw()
 win6.title("محیط لوزی")
@@ -553,7 +556,9 @@ canvas_win6.create_window(230,180, window=v5)
 
 b11=tk.Button(win6,text="بازگشت",bg="#eaed13",fg="black",width=12,height=2,command=back5)
 canvas_win6.create_window(450,430, window=b11)
+#endregion
 #-----win7_lozi---------------------
+#region
 win7=tk.Toplevel(win1)
 win7.withdraw()
 win7.title("مساحت لوزی")
@@ -589,10 +594,12 @@ canvas_win7.create_window(230,280, window=v6)
 
 b12=tk.Button(win7,text="بازگشت",bg="#1d4f2b",fg="#fff",width=12,height=2,command=back6)
 canvas_win7.create_window(450,430, window=b12)
+#endregion
 #---------Finish_page1-----------------------------
 
 #--------Start_page2-------------------------------
 #-------پنجره دوم برنامه-------------------------
+#region
 win8 = tk.Toplevel(win1)
 win8.withdraw()
 win8.title("محیط و مساحت")
@@ -626,8 +633,9 @@ b19=tk.Button(win8,text="محیط متوازی الاضلاع",bg="#1c2d6f",fg="
 canvas_win8.create_window(650, 260, window=b19)
 b20=tk.Button(win8,text="مساحت متوازی الاضلاع",bg="#1c2d6f",fg="white",width=15,height=2,command=logwin13)
 canvas_win8.create_window(780, 260, window=b20)
-
+#endregion
 #-------win9_mosalas-----------------
+#region
 win9=tk.Toplevel(win1)
 win9.withdraw()
 win9.title("محیط مثلث")
@@ -670,8 +678,9 @@ canvas_win9.create_window(230,380, window=v7)
 
 b21=tk.Button(win9,text="بازگشت",bg="#1d4f2b",fg="#fff",width=12,height=2,command=back7)
 canvas_win9.create_window(450,480, window=b21)
-
+#endregion
 #---------win10_mosalas------------------
+#region
 win10=tk.Toplevel(win1)
 win10.withdraw()
 win10.title("مساحت مثلث")
@@ -707,11 +716,9 @@ canvas_win10.create_window(230,280, window=v8)
 
 b22=tk.Button(win10,text="بازگشت",bg="#dc9b0d",fg="black",width=12,height=2,command=back8)
 canvas_win10.create_window(450,400, window=b22)
-
-
-
-
+#endregion
 #---------win11_mostatil------------------
+#region
 win11=tk.Toplevel(win1)
 win11.withdraw()
 win11.title("محیط مستطیل")
@@ -747,8 +754,9 @@ canvas_win11.create_window(230,280, window=v9)
 
 b23=tk.Button(win11,text="بازگشت",bg="#0ddc94",fg="black",width=12,height=2,command=back9)
 canvas_win11.create_window(450,400, window=b23)
-
+#endregion
 #---------win12_mostatil------------------
+#region
 win12=tk.Toplevel(win1)
 win12.withdraw()
 win12.title("مساحت مستطیل")
@@ -784,8 +792,9 @@ canvas_win12.create_window(230,280, window=v10)
 
 b24=tk.Button(win12,text="بازگشت",bg="#1d4f2b",fg="#fff",width=12,height=2,command=back10)
 canvas_win12.create_window(450,400, window=b24)
-
+#endregion
 #-----win13_motavazilazla---------
+#region
 win13=tk.Toplevel(win1)
 win13.withdraw()
 win13.title("محیط متوازی الاضلاع")
@@ -821,8 +830,9 @@ canvas_win13.create_window(230,280, window=v11)
 
 b25=tk.Button(win13,text="بازگشت",bg="#d1d0ad",fg="black",width=12,height=2,command=back11)
 canvas_win13.create_window(450,400, window=b25)
-
+#endregion
 #------win14_motavazilazla--------
+#region
 win14=tk.Toplevel(win1)
 win14.withdraw()
 win14.title("مساحت متوازی الاضلاع")
@@ -858,13 +868,12 @@ canvas_win14.create_window(230,280, window=v12)
 
 b26=tk.Button(win14,text="بازگشت",bg="#cde70b",fg="black",width=12,height=2,command=back12)
 canvas_win14.create_window(450,400, window=b26)
-
-
-
-
+#endregion
 #--------Run_Program-----------------
+#region
 win1.resizable(False, False) 
 win8.resizable(False, False) 
 win1.protocol("WM_DELETE_WINDOW",close_window)
 win8.protocol("WM_DELETE_WINDOW",close_window)
 win1.mainloop()
+#endregion
